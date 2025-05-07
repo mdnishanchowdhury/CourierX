@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Delivered | CourierX</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.5;
+        }
+        .email-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .email-header {
+            background-color: #1E1E1E;
+            padding: 25px;
+            color: white;
+            text-align: center;
+        }
+        .email-body {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .email-footer {
+            padding: 15px;
+            background-color: #1E1E1E;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+        .delivery-status {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 10px 0;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            from { opacity: 0.7; }
+            to { opacity: 1; }
+        }
+        .parcel-details {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .detail-row {
+            margin-bottom: 10px;
+        }
+        .detail-label {
+            font-weight: bold;
+            display: inline-block;
+            width: 100px;
+        }
+        .parcel-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border-radius: 4px;
+            background-color: #1E1E1E;
+            padding: 24px;
+        }
+        a {
+            color: #1E90FF;
+        }
+        .note-box {
+            background-color: #fff8e1;
+            padding: 12px;
+            border-left: 4px solid #FFD700;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <div class="email-header">
+            <h1>Your Parcel Has Been Delivered</h1>
+        </div>
+        
+        <div class="email-body">
+            <p>Hello <%= sendername %>,</p>
+            <p>We're pleased to inform you that your parcel has been successfully delivered.</p>
+            
+            <div class="delivery-status">DELIVERED</div>
+            
+            <div class="parcel-details">
+                <div class="detail-row">
+                    <span class="detail-label">From:</span> <%= from %>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">To:</span> <%= to %>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Sender:</span> <%= sendername %>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Recipient:</span> <%= recipientname %>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Cost:</span> $<%= cost %>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Weight:</span> <%= weight %>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Note:</span> <%= note %>
+                </div>
+            </div>
+            
+            <!-- <img src="https://i.ibb.co.com/MqFL2k2/esd.png" alt="Parcel image" class="parcel-image"> -->
+            
+            <div class="note-box">
+                <p>If you didn't send this parcel, please ignore this email or contact us immediately.</p>
+            </div>
+        </div>
+        
+        <div class="email-footer">
+            <p>Need help? Contact us at <a href="support@courierx.com" style="color:#fff;">support@courierx.com</a></p>
+            <p>© 2025 CourierX. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
