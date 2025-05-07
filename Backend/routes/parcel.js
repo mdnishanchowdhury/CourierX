@@ -11,10 +11,10 @@ const {
 const { verifyToken, verifyTokenAndAuthorization } = require("../middlewares/verifyToken");
 
 // add parcel
-router.post("/",verifyToken,createParcel);
+router.post("/",createParcel);
 
 //get all parcels
-router.get("/", verifyTokenAndAuthorization, getAllParcels);
+router.get("/", getAllParcels);
 
 //update parcel
 router.put("/:id", updateParcel);

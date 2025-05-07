@@ -1,5 +1,6 @@
 const Parcel = require("../models/Parcel");
 
+
 // Create a new parcel
 const createParcel = async (req, res) => {
   try {
@@ -48,42 +49,45 @@ const getUserParcel = async (req, res) => {
   }
 };
 
-// Update a parcel
-const updateParcel = async (req, res) => {
-  try {
-    const updatedParcel = await Parcel.findByIdAndUpdate(
-      req.params.id,
-      { $set: req.body },
-      { new: true }
-    );
-    if (!updatedParcel) {
-      return res.status(404).json({ message: "Parcel not found" });
-    }
-    res.status(200).json(updatedParcel);
-  } catch (error) {
-    console.error("Update Parcel Error:", error);
-    res.status(500).json({ message: "Server Error", error });
-  }
-};
-// Update a parcel
+// // Update a parcel
 // const updateParcel = async (req, res) => {
 //   try {
 //     const updatedParcel = await Parcel.findByIdAndUpdate(
-//       req.params.id,        // find parcel by ID from route
-//       { $set: req.body },   // update fields with request body
-//       { new: true }         // return the updated document
+//       req.params.id,
+//       { $set: req.body },
+//       { new: true }
 //     );
-
 //     if (!updatedParcel) {
 //       return res.status(404).json({ message: "Parcel not found" });
 //     }
-
-//     res.status(200).json(updatedParcel);  // send back updated parcel
+//     res.status(200).json(updatedParcel);
 //   } catch (error) {
 //     console.error("Update Parcel Error:", error);
 //     res.status(500).json({ message: "Server Error", error });
 //   }
 // };
+
+
+const updateParcel = async (req, res) => {
+  const { status, feedback } = req.body;
+  try {
+    const updatedParcel = await Parcel.findByIdAndUpdate(
+      req.params.id,
+      { status, feedback }, // Update status and feedback
+      { new: true }  // Return the updated parcel
+    );
+
+    if (!updatedParcel) {
+      return res.status(404).json({ message: "Parcel not found" });
+    }
+
+    res.status(200).json(updatedParcel); // Respond with the updated parcel
+  } catch (error) {
+    console.error("Error updating parcel: ", error);
+    res.status(500).json({ message: "Server Error", error });
+  }
+};
+
 
 // Delete a parcel
 const deleteParcel = async (req, res) => {
