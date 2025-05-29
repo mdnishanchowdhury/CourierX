@@ -119,7 +119,7 @@ const Register = () => {
             CourierX
           </h2>
           <img 
-            src="https://i.ibb.co.com/MqFL2k2/esd.png" 
+            src="https://i.ibb.co.com/MJZmvSF/goods-courier-service-500x500-1-large.jpg" 
             alt="Delivery Illustration" 
             className="w-full max-w-xs sm:max-w-md mx-auto" 
           />

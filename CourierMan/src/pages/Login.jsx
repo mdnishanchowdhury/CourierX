@@ -99,7 +99,7 @@ const Login = () => {
        <h2 className="text-[#000000] font-semibold text-[35px] mb-4">
        CourierX
        </h2>
-       <img src="https://i.ibb.co.com/MqFL2k2/esd.png" alt="Delivery Illustration" className="max-w-md mx-auto" />
+       <img src="https://i.ibb.co.com/MJZmvSF/goods-courier-service-500x500-1-large.jpg" alt="Delivery Illustration" className="max-w-md mx-auto" />
      </div>
      
      {/* Right Side - Login Form */}

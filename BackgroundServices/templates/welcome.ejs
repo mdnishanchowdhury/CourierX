@@ -1,202 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to CourierX</title>
-    <style type="text/css">
-        /* Base Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            min-width: 100%;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333333;
-        }
-        
-        a {
-            color: #0066cc;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-top: 0;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-        
-        h2 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-        
-        p {
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-        
-        /* Layout */
-        .email-wrapper {
-            max-width: 600px;
-            margin: 0 auto;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        .email-header {
-            background-color: #2563eb;
-            padding: 40px 30px;
-            text-align: center;
-        }
-        
-        .email-logo {
-            max-width: 180px;
-            margin-bottom: 20px;
-        }
-        
-        .email-body {
-            padding: 30px;
-            background-color: #ffffff;
-        }
-        
-        .email-footer {
-            background-color: #f8f9fa;
-            padding: 25px 30px;
-            text-align: center;
-            font-size: 14px;
-            color: #666666;
-            border-top: 1px solid #e5e7eb;
-        }
-        
-        /* Components */
-        .info-card {
-            background-color: #f8f9fa;
-            border-left: 4px solid #2563eb;
-            padding: 16px 20px;
-            margin: 25px 0;
-            border-radius: 0 4px 4px 0;
-        }
-        
-        .credentials {
-            background-color: #f3f4f6;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-        
-        .credentials p {
-            margin-bottom: 10px;
-        }
-        
-        .password {
-            font-family: monospace;
-            font-size: 14px;
-            background-color: #e5e7eb;
-            padding: 8px 12px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-top: 5px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #2563eb;
-            color: #ffffff !important;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            margin: 15px 0;
-        }
-        
-        .btn:hover {
-            background-color: #1d4ed8;
-            text-decoration: none;
-        }
-        
-        .note {
-            background-color: #fff8e6;
-            border-left: 4px solid #ffcc00;
-            padding: 16px 20px;
-            margin: 25px 0;
-            border-radius: 0 4px 4px 0;
-        }
-        
-        .social-links {
-            margin: 20px 0;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to CourierX</title>
+  <style type="text/css">
+    /* Base Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.5;
+    }
+
+    a {
+        color: #1E90FF;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 0 0 20px 0;
+        color: white;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 15px 0;
+        color: #1a1a1a;
+    }
+
+    p {
+        margin: 0 0 15px 0;
+    }
+
+    /* Layout */
+    .email-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        border-radius: 5px;
+        overflow: hidden;
+        background: white;
+    }
+
+    .email-header {
+        background-color: #1E1E1E;
+        padding: 25px;
+        text-align: center;
+        color: white;
+    }
+
+    .email-body {
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+
+    .email-footer {
+        padding: 15px;
+        background-color: #1E1E1E;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* Components */
+    .info-card {
+        background-color: white;
+        border: 1px solid #eee;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+    }
+
+    .credentials {
+        background-color: #f3f4f6;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .credentials p {
+        margin-bottom: 10px;
+    }
+
+    .password {
+        font-family: monospace;
+        font-size: 14px;
+        background-color: #e5e7eb;
+        padding: 8px 12px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #FFA500;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        margin: 15px 0;
+    }
+
+    .btn:hover {
+        background-color: #e69500;
+    }
+
+    .note {
+        background-color: #fff8e1;
+        border-left: 4px solid #FFD700;
+        padding: 12px;
+        margin: 15px 0;
+        border-radius: 4px;
+    }
+
+    .social-links {
+        margin: 20px 0;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin: 0 8px;
+        color: #1E90FF;
+        font-weight: normal;
+        font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-
-    <div class="email-wrapper">
-        <div class="email-header">
-            <h1>Welcome to CourierX</h1>
-        </div>
-        
-        <div class="email-body">
-            <p>Hello <%= fullname %>,</p>
-            <p>Thank you for creating an account with CourierX. We're excited to have you on board!</p>
-            
-            <div class="info-card">
-                <h2>Your Account Information</h2>
-                <div class="credentials">
-                    <p><strong>Email:</strong> <%= email %></p>
-                    <p><strong>Password:</strong></p>
-                    <div class="password"><%= password %></div>
-                </div>
-                <p>For security reasons, we recommend changing your password after first login.</p>
-            </div>
-            
-            <a href="http://localhost:5175/login" class="btn">Login to Your Account</a>
-            
-            <div class="note">
-                <h2>Important Security Note</h2>
-                <p><strong>Please keep your password confidential.</strong> CourierX will never ask for your password via email or phone.</p>
-                <p>If you did not register for a CourierX account, please ignore this email or contact our support team immediately.</p>
-            </div>
-            
-            <p>Need help getting started? Check out our <a href="https://www.courierx.com/guides">Getting Started Guide</a>.</p>
-        </div>
-        
-        <div class="email-footer">
-            <p>© 2023 CourierX. All rights reserved.</p>
-            <p>
-                <a href="https://www.courierx.com/privacy">Privacy Policy</a> | 
-                <a href="https://www.courierx.com/terms">Terms of Service</a>
-            </p>
-            
-            <div class="social-links">
-                <a href="https://facebook.com/courierx">Facebook</a>
-                <a href="https://twitter.com/courierx">Twitter</a>
-                <a href="https://linkedin.com/company/courierx">LinkedIn</a>
-            </div>
-            
-            <p>
-                Contact us at <a href="mailto:support@courierx.com">support@courierx.com</a><br>
-            </p>
-        </div>
+  <div class="email-wrapper">
+    <div class="email-header">
+      <h1>Welcome to CourierX</h1>
     </div>
-    
+
+    <div class="email-body">
+      <p>Hello <%= fullname %>,</p>
+      <p>Thank you for creating an account with CourierX. We're excited to have you on board!</p>
+
+      <div class="info-card">
+        <h2>Your Account Information</h2>
+        <div class="credentials">
+          <p><strong>Email:</strong> <%= email %></p>
+          <p><strong>Password:</strong></p>
+          <div class="password"><%= password %></div>
+        </div>
+        <p>For security reasons, we recommend changing your password after first login.</p>
+      </div>
+
+      <a href="http://localhost:5175/login" class="btn">Login to Your Account</a>
+
+      <div class="note">
+        <h2>Important Security Note</h2>
+        <p><strong>Please keep your password confidential.</strong> CourierX will never ask for your password via email or phone.</p>
+        <p>If you did not register for a CourierX account, please ignore this email or contact our support team immediately.</p>
+      </div>
+
+      <p>Need help getting started? Check out our <a href="https://www.courierx.com/guides">Getting Started Guide</a>.</p>
+    </div>
+
+    <div class="email-footer">
+      <p>© 2025 CourierX. All rights reserved.</p>
+      <p>
+        <a href="https://www.courierx.com/privacy" style="color: #fff;">Privacy Policy</a> | 
+        <a href="https://www.courierx.com/terms" style="color: #fff;">Terms of Service</a>
+      </p>
+      <div class="social-links">
+        <a href="https://facebook.com/courierx">Facebook</a>
+        <a href="https://twitter.com/courierx">Twitter</a>
+        <a href="https://linkedin.com/company/courierx">LinkedIn</a>
+      </div>
+      <p>
+        Contact us at <a href="mailto:support@courierx.com" style="color: #fff;">support@courierx.com</a>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
